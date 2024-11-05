@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, rgb(4, 84, 170), rgb(104, 233, 250));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.form-container {
+    width: 80%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color: white;
+}
+
+header {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000000;
+}
+
+.submit {
+    background-color: rgba(4, 84, 170, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.submit:hover {
+    background-color: rgba(4, 84, 170, 0.6);
+}
+/* Navbar estilo */
+.nav {
+position: fixed;
+top: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+height: 60px;
+background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+padding: 0 20px;
+z-index: 100;
+}
+
+.nav-logo img {
+width: 140px;
+height: 70px;
+margin-top: 0px;
+margin-right: 4px;
+}
+
+.nav-menu {
+display: flex;
+align-items: center;
+}
+
+.nav-menu ul {
+display: flex;
+margin-right: 20px;
+}
+
+.nav-menu ul li {
+list-style-type: none;
+position: relative;
+}
+
+.nav-menu ul li .link {
+text-decoration: none;
+font-weight: 400;
+color: #fff;
+padding: 8px 13px;
+margin: 0 5px;
+border-radius: 20px;
+transition: background 0.3s;
+}
+
+.nav-menu ul li .link:hover,
+.nav-menu ul li .link.active {
+background: rgba(255, 255, 255, 0.3);
+}
+
+/* Submenú desplegable */
+.nav-menu ul li ul {
+display: none;
+position: absolute;
+width: 95%;
+top: 32px;
+background-color: rgba(39, 39, 39, 0.8);
+border-radius: 10px;
+padding: 10px;
+}
+
+.nav-menu ul li:hover ul {
+display: block;
+}
+
+.nav-menu ul li ul li {
+margin: 0;
+}
+
+.nav-menu ul li ul li a {
+display: block;
+padding: 10px;
+color: #fff;
+}
+
+.nav-menu ul li ul li a:hover {
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Botón de menú responsive */
+.nav-menu-btn {
+display: none;
+flex-direction: column;
+}
+
+.nav-menu-btn span {
+background: white;
+width: 25px;
+height: 2px;
+margin: 4px;
+}
+
+.logout-btn {
+background-color: rgba(255, 0, 0, 0.7);
+color: white;
+border: none;
+border-radius: 30px;
+padding: 10px 20px;
+cursor: pointer;
+transition: .3s ease;
+}
+
+        /* Menú desplegable para móviles */
+        .nav-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .nav-menu-btn span {
+            background: white;
+            width: 25px;
+            height: 2px;
+            margin: 4px;
+        }
+        
+        /* Responsivo */
+        @media only screen and (max-width: 768px) {
+            .nav-menu ul {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: rgba(39, 39, 39, 0.8);
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 60%;
+                padding: 10px 0;
+                transition: transform 0.3s ease-in-out;
+            }
+        
+            .nav-menu ul.active {
+                display: flex;
+                transform: translateX(0);
+            }
+        
+            .nav-menu ul li .link {
+                padding: 8px 20px;
+                margin: 15px 25px;
+                width: 100%;
+                text-align: left;
+            }
+        
+            .nav-menu-btn {
+                display: flex;
+            }
+        
+            .logout-btn {
+                width: 100%;
+                text-align: center;
+                padding: 20px 15px;
+                margin-top: 20px;
+            }
+        }

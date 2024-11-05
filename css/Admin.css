@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, rgb(4, 84, 170), rgb(104, 233, 250));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.nav-logo img {
+    width: 140px;
+    height: 70px;
+    margin-right: 4px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-menu ul {
+    display: flex;
+    margin-right: 20px;
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    padding: 8px 13px;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: background 0.5s;
+}
+
+.nav-menu ul li .link:hover, .nav-menu ul li .link.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Submenú */
+.nav-menu ul li ul {
+    display: none;
+    position: absolute;
+    width: 95%;
+    top: 32px;
+    background-color: rgba(39, 39, 39, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.nav-menu ul li:hover ul {
+    display: block;
+}
+
+.nav-menu ul li ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+}
+
+.nav-menu ul li ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Menú desplegable para móviles */
+.nav-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-menu-btn span {
+    background: white;
+    width: 25px;
+    height: 2px;
+    margin: 4px;
+}
+
+/* Responsivo */
+@media only screen and (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(39, 39, 39, 0.8);
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 60%;
+        padding: 10px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-menu ul.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .nav-menu ul li .link {
+        padding: 8px 20px;
+        margin: 15px 25px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-menu-btn {
+        display: flex;
+    }
+
+    .logout-btn {
+        width: 100%;
+        text-align: center;
+        padding: 20px 15px;
+        margin-top: 20px;
+    }
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    padding: 8px 13px;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: background 0.5s;
+}
+
+.nav-menu ul li .link:hover, .nav-menu ul li .link.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-menu-btn span {
+    background: white;
+    width: 25px;
+    height: 2px;
+    margin: 4px;
+}
+
+.logout-btn {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+header {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table thead {
+    background-color: rgba(4, 84, 170, 0.8);
+    color: white;
+}
+
+.user-table th, .user-table td {
+    padding: 12px; 
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: rgba(4, 84, 170, 0.8);
+    color: white;
+}
+
+.user-table td {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.user-table tr:hover {
+    background-color: rgba(104, 233, 250, 0.3);
+}
+
+/* Para pantallas menores de 768px */
+@media only screen and (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start; /* Alinear el menú a la izquierda */
+        background-color: rgba(39, 39, 39, 0.8);
+        position: absolute;
+        top: 75px;
+        left: 0; /* Colocar el menú en el lado izquierdo */
+        width: 60%; /* Controla el ancho del menú */
+        padding: 10px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-menu ul.active {
+        display: flex; /* Cambiar a flex para mostrar el menú */
+        transform: translateX(0); /* Asegura que el menú aparezca desde la izquierda */
+    }
+
+    .nav-menu ul li .link {
+        padding: 8px 20px;
+        margin: 50px 25px;
+        width: 100%; /* Asegura que los enlaces ocupen el 100% del ancho del menú */
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+
+    .nav-menu-btn {
+        display: flex;
+    }
+
+    .nav-logo {
+        order: 2; /* Mueve la imagen del logo al centro */
+        justify-content: flex-end;
+    }
+
+    .logout-btn {
+        width: 100%;
+        text-align: center;
+        padding: 20px 15px;
+        margin-top: 20px;
+    }
+}
+

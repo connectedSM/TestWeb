@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/mainlogin.css">
+    <title>Login & Registration</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="../img/LogoEmp.jpeg" alt="Logo de la empresa">
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+    
+        <!----------------------------- Form box ----------------------------------->    
+        <div class="form-box">
+            
+            <!------------------- login form -------------------------->
+    
+            <form class="login-container" id="login" action="../controller/login.php" method="POST">
+                <div class="top">
+                    <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                    <header>Login</header>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" id="Usuario" placeholder="Username" name="Usuario" autocomplete="on" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" id="Contraseña" placeholder="Password" name="Contraseña" required>
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sign In">
+                </div>
+                <!-- <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check" name="rememberMe">
+                        <label for="login-check"> Remember Me</label>
+                    </div>
+                </div> -->
+            </form>
+    
+            <!------------------- registration form -------------------------->
+    
+            <form class="register-container" id="register" action="../controller/register.php" method="POST">
+                <!-- <div class="top">
+                    <span>Have an account? <a href="#" onclick="login()">Login</a></span> -->
+                    <header>Sign Up</header>
+                <!-- </div> -->
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Firstname" name="Nombre" autocomplete="on" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Lastname" name="Apellidos" autocomplete="on" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="email" class="input-field" placeholder="Email" id="Correo" name="Correo" autocomplete="on" required>
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Username" id="Usuario" name="Usuario" autocomplete="on" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <select class="input-field" name="Rol" id="Rol">
+                        <option>Rol</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Usuario">Usuario</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password" id="Contraseña" name="Contraseña">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="register">
+                </div>
+                <!-- <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check" name="rememberMe">
+                        <label for="register-check"> Remember Me</label>
+                    </div>
+                </div> -->
+            </form>
+        </div>
+    </div> 
+    <script src="../js/scriptLogin.js"></script>    
+</body>
+</html>

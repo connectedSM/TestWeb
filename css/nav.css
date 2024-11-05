@@ -1,0 +1,52 @@
+.nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.nav .nav-logo {
+    float: left;
+}
+
+.nav .nav-menu {
+    display: none;
+    float: right;
+}
+
+.nav .nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav .nav-menu ul li {
+    display: block;
+}
+
+.nav .nav-menu ul li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav .nav-menu ul li a:hover {
+    background-color: #575757;
+}
+
+.nav .hamburger {
+    display: block;
+    cursor: pointer;
+    float: right;
+    padding: 14px 16px;
+    color: white;
+    font-size: 20px;
+}
+
+@media (min-width: 600px) {
+    .nav .nav-menu {
+        display: block !important;
+    }
+    .nav .hamburger {
+        display: none;
+    }
+}

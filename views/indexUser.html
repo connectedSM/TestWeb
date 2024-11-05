@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mainUser.css">
+    <title>Página Principal</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="../img/LogoEmp.jpeg" alt="Logo de la empresa">
+            </div>
+            <div class="nav-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu">
+                <ul id="nav-list">
+                    <li><a class="link" href="detallesTareas.php">Detalles</a></li>
+                    <li><a class="link" href="tableroTareas.php">Mis Tareas</a></li>
+                    <li><a class="link" href="calendarioU.php">Calendario</a></li>
+                </ul>
+                <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+            </div>
+        </nav>
+        <header>
+            <h1>Bienvenido Usuario</h1>
+        </header>
+        <section>
+            <h2>Descripción general</h2>
+            <p>Bienvenido a tu página principal. Aquí puedes gestionar tus tareas</p>
+        </section>
+    </div>
+    <script>
+        function toggleMenu() {
+            var navList = document.getElementById('nav-list');
+            navList.classList.toggle('active');
+        }
+
+        function logout() {
+            window.location.href = 'indexLogin.html';
+        }
+    </script>
+</body>
+</html>
